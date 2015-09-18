@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Snake &mdash; wiiproject 1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="wiiproject 1 documentation" href="index.html" />
+    <link rel="next" title="Food" href="food.html" />
+    <link rel="prev" title="WiiProject" href="wiiproject.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="food.html" title="Food"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="wiiproject.html" title="WiiProject"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">wiiproject 1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="module-Snake">
+<span id="snake"></span><h1>Snake<a class="headerlink" href="#module-Snake" title="Permalink to this headline">¶</a></h1>
+<p>Clase para representar la serpiente</p>
+<p>Controla el movimiento de la serpiente y la acción de comer para aumentar de tamaño</p>
+<dl class="class">
+<dt id="Snake.Snake">
+<em class="property">class </em><tt class="descclassname">Snake.</tt><tt class="descname">Snake</tt><big>(</big><em>length</em><big>)</big><a class="headerlink" href="#Snake.Snake" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="Snake.Snake.__init__">
+<tt class="descname">__init__</tt><big>(</big><em>length</em><big>)</big><a class="headerlink" href="#Snake.Snake.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dibuja una serpiente de longitud length.
+length: número entero mayor a 0 y menor a 8.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="Snake.Snake.direction">
+<tt class="descname">direction</tt><em class="property"> = 'RIGHT'</em><a class="headerlink" href="#Snake.Snake.direction" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Snake.Snake.eat">
+<tt class="descname">eat</tt><big>(</big><big>)</big><a class="headerlink" href="#Snake.Snake.eat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Agrega un nuevo punto al final del cuerpo de la serpiente.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Snake.Snake.forward">
+<tt class="descname">forward</tt><big>(</big><em>direction</em><big>)</big><a class="headerlink" href="#Snake.Snake.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calcula y regresa la nueva posición de la cabeza a partir de la dirección del movimiento.
+direction: string [UP | DOWN | RIGHT | LEFT]</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Snake.Snake.move">
+<tt class="descname">move</tt><big>(</big><em>direction</em><big>)</big><a class="headerlink" href="#Snake.Snake.move" title="Permalink to this definition">¶</a></dt>
+<dd><p>Mueve un paso el cuerpo de la serpiente hacia la dirección que apunte.
+direction: string [UP | DOWN | RIGHT | LEFT]</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Snake.Snake.show">
+<tt class="descname">show</tt><big>(</big><big>)</big><a class="headerlink" href="#Snake.Snake.show" title="Permalink to this definition">¶</a></dt>
+<dd><p>Muestra en pantalla las coordenadas de cada punto del cuerpo.
+(Usado para debug)</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="wiiproject.html"
+                        title="previous chapter">WiiProject</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="food.html"
+                        title="next chapter">Food</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/snake.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="food.html" title="Food"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="wiiproject.html" title="WiiProject"
+             >previous</a> |</li>
+        <li><a href="index.html">wiiproject 1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, Leonardo Muñoz.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>

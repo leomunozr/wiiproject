@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>WiiProject &mdash; wiiproject 1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="wiiproject 1 documentation" href="index.html" />
+    <link rel="next" title="Snake" href="snake.html" />
+    <link rel="prev" title="wiiproject’s docs" href="index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="snake.html" title="Snake"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="wiiproject’s docs"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">wiiproject 1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="module-WiiProject">
+<span id="wiiproject"></span><h1>WiiProject<a class="headerlink" href="#module-WiiProject" title="Permalink to this headline">¶</a></h1>
+<p>Programa principal Snake.</p>
+<p>Para salir, presionar botón C del Wii Nunchuck.</p>
+<dl class="class">
+<dt id="WiiProject.Program">
+<em class="property">class </em><tt class="descclassname">WiiProject.</tt><tt class="descname">Program</tt><a class="headerlink" href="#WiiProject.Program" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="WiiProject.Program.__init__">
+<tt class="descname">__init__</tt><big>(</big><big>)</big><a class="headerlink" href="#WiiProject.Program.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Inicialización del juego.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="WiiProject.Program.change_direction">
+<tt class="descname">change_direction</tt><big>(</big><big>)</big><a class="headerlink" href="#WiiProject.Program.change_direction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Interpreta la dirección del joystick para cambiar la dirección en la que avanza la serpiente.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="WiiProject.Program.check_collisions">
+<tt class="descname">check_collisions</tt><big>(</big><big>)</big><a class="headerlink" href="#WiiProject.Program.check_collisions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Revisar si la cabeza de la serpiente colisionó con el resto del cuerpo o con comida</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="WiiProject.Program.game_over">
+<tt class="descname">game_over</tt><big>(</big><em>end_code</em><big>)</big><a class="headerlink" href="#WiiProject.Program.game_over" title="Permalink to this definition">¶</a></dt>
+<dd><p>Controla cómo terminará el juego.
+Al perder, espera 3 seg y luego saldrá.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="WiiProject.Program.keep_playing">
+<tt class="descname">keep_playing</tt><em class="property"> = True</em><a class="headerlink" href="#WiiProject.Program.keep_playing" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="WiiProject.Program.make_food">
+<tt class="descname">make_food</tt><big>(</big><big>)</big><a class="headerlink" href="#WiiProject.Program.make_food" title="Permalink to this definition">¶</a></dt>
+<dd><p>Mientras el juego siga activo, actualiza la posición del objeto de comida cada 3 seg.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="WiiProject.Program.read_control">
+<tt class="descname">read_control</tt><big>(</big><big>)</big><a class="headerlink" href="#WiiProject.Program.read_control" title="Permalink to this definition">¶</a></dt>
+<dd><p>Mientras el juego siga activo, lee el control de Wii y mueve la serpiente o termina el juego.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="WiiProject.Program.update_screen">
+<tt class="descname">update_screen</tt><big>(</big><big>)</big><a class="headerlink" href="#WiiProject.Program.update_screen" title="Permalink to this definition">¶</a></dt>
+<dd><p>Mientras el juego siga activo, refresca la pantalla con la posición de la serpiente y de la comida</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="WiiProject.Program.update_snake">
+<tt class="descname">update_snake</tt><big>(</big><big>)</big><a class="headerlink" href="#WiiProject.Program.update_snake" title="Permalink to this definition">¶</a></dt>
+<dd><p>Mientras el juego siga activo, actualiza la posición de la serpiente
+moviéndola hacia adelante cada 0.2 seg y verifica colisiones.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">wiiproject&#8217;s docs</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="snake.html"
+                        title="next chapter">Snake</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/wiiproject.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="snake.html" title="Snake"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="wiiproject’s docs"
+             >previous</a> |</li>
+        <li><a href="index.html">wiiproject 1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, Leonardo Muñoz.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>

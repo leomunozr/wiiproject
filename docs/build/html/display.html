@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Display &mdash; wiiproject 1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="wiiproject 1 documentation" href="index.html" />
+    <link rel="next" title="Point" href="point.html" />
+    <link rel="prev" title="WiiData" href="wiidata.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="point.html" title="Point"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="wiidata.html" title="WiiData"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">wiiproject 1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="module-Display">
+<span id="display"></span><h1>Display<a class="headerlink" href="#module-Display" title="Permalink to this headline">¶</a></h1>
+<p>Clase para controlar una matriz de leds de 8x8.</p>
+<p>Controla la visualización de coordenadas (representadas por objetos Point) en una matriz de leds de 8x8.
+Implementa un registro de corrimientos 74HC595 para el control individual de cada led en la matriz.
+El registro de corrimientos A controla las columnas y el registro B controla los renglones.
+Ambos registros son controlados por 3 GPIO c/u en la Raspberry Pi. Éstos son:
+SER - A: Pin 11, B: Pin 12.
+SRCLK - A: Pin 13, B: Pin 16.
+RCLK - A: Pin15, B: Pin 18.
+El registro A tiene también:
+SRCLR - Pin 7.</p>
+<dl class="class">
+<dt id="Display.Display">
+<em class="property">class </em><tt class="descclassname">Display.</tt><tt class="descname">Display</tt><a class="headerlink" href="#Display.Display" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="Display.Display.NUM_COLS">
+<tt class="descname">NUM_COLS</tt><em class="property"> = 8</em><a class="headerlink" href="#Display.Display.NUM_COLS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Display.Display.NUM_ROWS">
+<tt class="descname">NUM_ROWS</tt><em class="property"> = 8</em><a class="headerlink" href="#Display.Display.NUM_ROWS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="Display.Display.__init__">
+<tt class="descname">__init__</tt><big>(</big><big>)</big><a class="headerlink" href="#Display.Display.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Inicialización de los registros de salida en la Raspberry Pi.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Display.Display.clean_screen">
+<tt class="descname">clean_screen</tt><big>(</big><big>)</big><a class="headerlink" href="#Display.Display.clean_screen" title="Permalink to this definition">¶</a></dt>
+<dd><p>Limpia la configuración de los GPIO de la Raspberry Pi.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Display.Display.matrix_driver">
+<tt class="descname">matrix_driver</tt><big>(</big><em>bits_matrix</em><big>)</big><a class="headerlink" href="#Display.Display.matrix_driver" title="Permalink to this definition">¶</a></dt>
+<dd><p>Muestra en la matriz de leds el arreglo de bits.
+bits_matrix: arreglo multidimensional de enteros 0 ó 1.
+El primer nivel del arreglo representa los renglones de la matriz,
+y el segundo nivel el estado de los leds (on/off).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Display.Display.points_to_bits">
+<tt class="descname">points_to_bits</tt><big>(</big><em>array_points</em><big>)</big><a class="headerlink" href="#Display.Display.points_to_bits" title="Permalink to this definition">¶</a></dt>
+<dd><p>Método que traduce las coordenadas de un objeto Punto
+a un arreglo de bits (estados on/off) para usar en la matriz de leds.
+array_points: arreglo de coordenadas representadas por un objeto Point.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Display.Display.show">
+<tt class="descname">show</tt><big>(</big><em>array_points</em><big>)</big><a class="headerlink" href="#Display.Display.show" title="Permalink to this definition">¶</a></dt>
+<dd><p>Muestra en el display un arreglo de puntos.
+array_points: arreglo de coordenadas representadas por un objeto Point.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="Display.wait_ns">
+<tt class="descclassname">Display.</tt><tt class="descname">wait_ns</tt><big>(</big><em>nanoseconds</em><big>)</big><a class="headerlink" href="#Display.wait_ns" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pone en espera el hilo por los nanosegundos indicados.</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="wiidata.html"
+                        title="previous chapter">WiiData</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="point.html"
+                        title="next chapter">Point</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/display.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="point.html" title="Point"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="wiidata.html" title="WiiData"
+             >previous</a> |</li>
+        <li><a href="index.html">wiiproject 1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, Leonardo Muñoz.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>
