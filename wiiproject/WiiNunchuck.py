@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from smbus import SMBus
+#from smbus import SMBus
 from time import sleep
 from WiiData import WiiData
 

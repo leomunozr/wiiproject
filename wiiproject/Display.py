@@ -16,7 +16,7 @@ SRCLR - Pin 7.
 """
 
 import os
-import RPi.GPIO as GPIO
+#import RPi.GPIO as GPIO
 from Point import Point
 from random import randint
 from time import sleep
