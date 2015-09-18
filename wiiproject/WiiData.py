@@ -7,7 +7,7 @@ class WiiData(object):
 
 	Envoltorio que representa los datos del Wii Nunchuck
 
-	Attributes:
+	:Attributes:
 		:joystick_x: Movimiento horizontal del joystick. Número entero de 0 a 255.
 		:joystick_y: Movimiento vertical del joystick. Número entero de 0 a 255.
 		:button_c: Botón C presionado. 0: no presionado, 1: presionado.
