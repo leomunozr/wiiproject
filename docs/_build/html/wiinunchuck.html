@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>WiiNunchuck &mdash; wiiproject 1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="wiiproject 1 documentation" href="index.html" />
+    <link rel="next" title="WiiData" href="wiidata.html" />
+    <link rel="prev" title="Food" href="food.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="wiidata.html" title="WiiData"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="food.html" title="Food"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">wiiproject 1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-WiiNunchuck">
+<span id="wiinunchuck"></span><h1>WiiNunchuck<a class="headerlink" href="#module-WiiNunchuck" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="WiiNunchuck.WiiNunchuck">
+<em class="property">class </em><code class="descclassname">WiiNunchuck.</code><code class="descname">WiiNunchuck</code><a class="headerlink" href="#WiiNunchuck.WiiNunchuck" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Clase para leer los sensores y botones del Wii Nunchuck</p>
+<p>Inicializa y controla la lectura del Wii Nunchuck.
+Requiere del uso del puerto I2C, por lo que éste debió ser 
+previamente configurado ejecutando el script configuration.sh.</p>
+<dl class="docutils">
+<dt>Attributes:</dt>
+<dd><dl class="first docutils">
+<dt>port_i2c: Número del puerto I2C. Para versiones de Raspberry Pi superiores </dt>
+<dd>a la versión de 512M el número del puerto I2C es el 1.</dd>
+</dl>
+<p class="last">dir_i2c: Dirección I2C del dispositivo Wii Nunchuck. Por default es 0x52.</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="WiiNunchuck.WiiNunchuck.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#WiiNunchuck.WiiNunchuck.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Inicializa el Wii Nunchuck para que atienda solicitudes de lectura.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="WiiNunchuck.WiiNunchuck.dir_i2c">
+<code class="descname">dir_i2c</code><em class="property"> = 82</em><a class="headerlink" href="#WiiNunchuck.WiiNunchuck.dir_i2c" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="WiiNunchuck.WiiNunchuck.port_i2c">
+<code class="descname">port_i2c</code><em class="property"> = 1</em><a class="headerlink" href="#WiiNunchuck.WiiNunchuck.port_i2c" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="WiiNunchuck.WiiNunchuck.read_data">
+<code class="descname">read_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#WiiNunchuck.WiiNunchuck.read_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lee los valores de los sensores y botones del Wii Nunchuck.
+En caso de no encontrar el dispositivo en la dirección 0x52, arroja una excepción.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="WiiNunchuck.WiiNunchuck.wii_init">
+<code class="descname">wii_init</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#WiiNunchuck.WiiNunchuck.wii_init" title="Permalink to this definition">¶</a></dt>
+<dd><p>Envía la secuencia de inicialización al Wii Nunchuck por I2C para que atienda solicitudes de lectura.
+En caso de no encontrar el dispositivo en la dirección 0x52, arroja una excepción.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="food.html"
+                        title="previous chapter">Food</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="wiidata.html"
+                        title="next chapter">WiiData</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/wiinunchuck.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="wiidata.html" title="WiiData"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="food.html" title="Food"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">wiiproject 1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2015, Leonardo Muñoz.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+  </body>
+</html>

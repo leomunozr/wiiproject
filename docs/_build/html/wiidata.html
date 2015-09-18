@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>WiiData &mdash; wiiproject 1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="wiiproject 1 documentation" href="index.html" />
+    <link rel="next" title="Display" href="display.html" />
+    <link rel="prev" title="WiiNunchuck" href="wiinunchuck.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="display.html" title="Display"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="wiinunchuck.html" title="WiiNunchuck"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">wiiproject 1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-WiiData">
+<span id="wiidata"></span><h1>WiiData<a class="headerlink" href="#module-WiiData" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="WiiData.WiiData">
+<em class="property">class </em><code class="descclassname">WiiData.</code><code class="descname">WiiData</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#WiiData.WiiData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Clase envoltorio para los datos leídos del Wii Nunchuck</p>
+<p>Envoltorio que representa los datos del Wii Nunchuck</p>
+<dl class="docutils">
+<dt>Attributes:</dt>
+<dd><p class="first">joystick_x: Movimiento horizontal del joystick. Número entero de 0 a 255.
+joystick_y: Movimiento vertical del joystick. Número entero de 0 a 255.
+button_c: Botón C presionado. 0: no presionado, 1: presionado.
+button_z: Botón Z presionado. 0: no presionado, 1: presionado.
+raw: Datos en &#8220;crudo&#8221;. Arreglo de 6 valores:</p>
+<blockquote class="last">
+<div>[ joystick_x, joystick_y, acc_x, acc_y, acc_z, buttons ]</div></blockquote>
+</dd>
+</dl>
+<p>(En la práctica, los valores del joystick en los límites nunca llegan a ser 0 ó 255.)</p>
+<dl class="method">
+<dt id="WiiData.WiiData.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#WiiData.WiiData.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Inicializa las propiedades de la clase según una cadena de datos en &#8220;crudo&#8221;</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd><dl class="first last docutils">
+<dt>data: Arreglo de datos en crudo: </dt>
+<dd>[ joystick_x, joystick_y, acc_x, acc_y, acc_z, buttons ]</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="WiiData.WiiData.button_c">
+<code class="descname">button_c</code><em class="property"> = None</em><a class="headerlink" href="#WiiData.WiiData.button_c" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="WiiData.WiiData.button_z">
+<code class="descname">button_z</code><em class="property"> = None</em><a class="headerlink" href="#WiiData.WiiData.button_z" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="WiiData.WiiData.joystick_x">
+<code class="descname">joystick_x</code><em class="property"> = None</em><a class="headerlink" href="#WiiData.WiiData.joystick_x" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="WiiData.WiiData.joystick_y">
+<code class="descname">joystick_y</code><em class="property"> = None</em><a class="headerlink" href="#WiiData.WiiData.joystick_y" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="WiiData.WiiData.show_data">
+<code class="descname">show_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#WiiData.WiiData.show_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Muestra en pantalla los valores de las propiedades.
+(Usada para debugging.)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="WiiData.WiiData.show_raw_data">
+<code class="descname">show_raw_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#WiiData.WiiData.show_raw_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Muestra en pantalla el arreglo de los valores en &#8220;crudo&#8221;.
+(Usada para debugging.)</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="wiinunchuck.html"
+                        title="previous chapter">WiiNunchuck</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="display.html"
+                        title="next chapter">Display</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/wiidata.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="display.html" title="Display"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="wiinunchuck.html" title="WiiNunchuck"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">wiiproject 1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2015, Leonardo Muñoz.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+  </body>
+</html>
