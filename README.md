@@ -9,10 +9,6 @@ Para poder utilizar el control Wii Nunchuck con la Raspberry Pi se debe configur
 Para ver un video demostrativo de este proyecto ve a:
 http://bit.ly/1F4Kg6V
 
-Cualquier tema realcionado con este proyecto puede contactar con el autor:
-	Leonardo Muñoz
-* leonardomr1@gmail.com
-
 Docs
 ----
 Para ver una referencia de los objetos ir a: http://wiiproject.rtfd.org
