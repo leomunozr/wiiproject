@@ -1,6 +1,6 @@
 Schematics
 ==========
 
-[fritzing schematic](images/wiiproject_bb.png)
+![fritzing schematic](../images/wiiproject_bb.png)
 
 Conexiones necesarias para el proyecto.
