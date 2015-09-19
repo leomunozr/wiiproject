@@ -10,8 +10,8 @@ Para ver un video demostrativo de este proyecto ve a:
 http://bit.ly/1F4Kg6V
 
 Cualquier tema realcionado con este proyecto puede contactar con el autor:
--Leonardo Muñoz
--leonardomr1@gmail.com
+- Leonardo Muñoz
+* leonardomr1@gmail.com
 
 Docs
 ----
